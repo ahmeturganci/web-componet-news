@@ -2,12 +2,19 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  width: 19rem;
   padding: 1rem;
   margin: 1rem;
-  box-shadow: 2.8px 2.8px 2.2px rgb(0 0 0 / 0%),
-    6.7px 6.7px 5.3px rgb(0 0 0 / 0%), 12.5px 12.5px 10px rgb(0 0 0 / 0%),
-    22.3px 22.3px 17.9px rgb(0 0 0 / 0%), 41.8px 41.8px 33.4px rgb(0 0 0 / 2%),
-    100px 100px 80px rgb(0 0 0 / 7%);
-  background: #e3e3e321;
+  background: #979b8621;
+}
+
+.article-wrapper.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.article-wrapper .fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
 }

@@ -1,10 +1,10 @@
 const headerTemplate = document.createElement("template");
 headerTemplate.innerHTML = `
 <style>
-@import url('http://${location.host}/src/components/app-header/app-header.css')
+@import url('http://${location.host}/src/components/app-header/app-header.css');
 </style>
 <header>
-news app | ahmeturganci
+news app | ahmeturganci 
 </header>
 `;
 class AppHeader extends HTMLElement {

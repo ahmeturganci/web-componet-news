@@ -4,14 +4,19 @@ newItem.innerHTML = `
 @import url('http://${location.host}/src/components/news-item/news-item.css')
 </style>
 <div class="article-wrapper">
-    <h1 class="title"></h1>
-  <p class="content"></p>
-    <div class="description"></div>
-    <div class="publishedAt"></div>
-    <div class="source"></div>
-    <a target="_blank" class="url">IMDb</a>
-    <img src="" class="urlToImage" alt="" height="100">
+    <div class="fill">
+        <img src="" class="urlToImage" alt="" height="250">
+    </div>
+    <div class="new-header">
+        <h1 class="title"></h1>
+        <span class="publishedAt"></span>
+        <span class="author"></span>
+    </div>
+    <p class="description">
+        <a href="" class="url"> Devamını oku...</a>
+    </p>
 </div>
+
 `;
 class NewsItem extends HTMLElement {
     constructor() {
@@ -19,20 +24,16 @@ class NewsItem extends HTMLElement {
         this.attachShadow({ mode: "open" });
         this.shadowRoot.appendChild(newItem.content.cloneNode(true));
         setTimeout(() => {
-            this.shadowRoot.querySelector(".article-wrapper .title").innerHTML = this.getAttribute("title");
-
-               this.shadowRoot.querySelector(".article-wrapper .content").innerHTML = this.getAttribute("content");
-               this.shadowRoot.querySelector(".article-wrapper .description").innerHTML = this.getAttribute("description").substring(0, this.getAttribute("description").indexOf('...'));
-               this.shadowRoot.querySelector(".article-wrapper .publishedAt").innerHTML = this.getAttribute("publishedAt");
-               this.shadowRoot.querySelector(".article-wrapper .source").innerHTML = this.getAttribute("source");
-               this.shadowRoot
-               this.shadowRoot.querySelector(".article-wrapper .url")
-               .setAttribute(
-                 "href",
-                 this.getAttribute("url")
-               );
-               this.shadowRoot.querySelector(".article-wrapper .urlToImage").src = this.getAttribute("urlToImage");
-            
+            this.shadowRoot.querySelector(".article-wrapper .new-header .title").innerHTML = this.getAttribute("title");
+            this.shadowRoot.querySelector(".article-wrapper .description").innerHTML = this.getAttribute("description");
+            this.shadowRoot.querySelector(".article-wrapper .publishedAt").innerHTML = this.getAttribute("publishedAt");
+            this.shadowRoot.querySelector(".article-wrapper .author").innerHTML = this.getAttribute('author');
+            // this.shadowRoot.querySelector(".article-wrapper .description .url")
+            // .setAttribute(
+            //     "href",
+            //     this.getAttribute("url")
+            //   );
+            this.shadowRoot.querySelector(".article-wrapper .fill .urlToImage").src = this.getAttribute("urlToImage");
         }, 100);
 
     }
