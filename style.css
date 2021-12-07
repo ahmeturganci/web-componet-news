@@ -31,3 +31,9 @@ html {
     max-width: 100%;
     height: auto;
   }
+
+
+  .news-wrapper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
