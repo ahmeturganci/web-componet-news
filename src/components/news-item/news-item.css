@@ -1,20 +1,62 @@
-.article-wrapper {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin: 1rem;
-  background: #979b8621;
+a {
+  text-decoration: none;
+}
+h1 {
+  font-weight: 300;
+}
+.card .wrapper {
+  background-color: #fff;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4), 0 15px 12px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem;
+  border-radius: .25rem;
+}
+.card .wrapper:hover .data {
+  transform: translateY(0);
+  cursor: pointer;
+}
+.card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(70px + 1em));
+  transition: transform 0.3s;
+}
+.card .data .content {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+}
+.card .author {
+  font-size: 12px;
+}
+.card .title {
+  margin-top: 10px;
+}
+.card .text {
+  height: 70px;
+  margin: 0;
+}
+.card input[type="checkbox"] {
+  display: none;
 }
 
-.article-wrapper.fill {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+
+.article-wrapper .publishedAt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #bc601a;
+  color: #fff;
+  padding: 0.8em;
 }
-.article-wrapper .fill img {
-  flex-shrink: 0;
-  min-width: 100%;
-  min-height: 100%
+
+.article-wrapper .content {
+  background-color: #fff;
+  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+}
+.article-wrapper .title h1 a {
+  color: #808080;
 }
