@@ -1,14 +1,14 @@
 
-import { topHeadlinesUrl } from './config/newsApi.js';
+import { topHeadlinesUrl } from './config/articleApi.js';
 
 const loader = document.querySelector("app-loader");
 
 window.addEventListener('load', () => {
     loader.style.visibility = "hidden";
-    getNews();
+    getArticles();
 });
 
-async function getNews() {
+async function getArticles() {
     const main = document.querySelector('#news');
     displayLoading();
     const res = await fetch(topHeadlinesUrl);

@@ -4,7 +4,7 @@ headerTemplate.innerHTML = `
 @import url('http://${location.host}/src/components/app-header/app-header.css');
 </style>
 <header>
-news app | ahmeturganci 
+news app | <a target="_blank" href="https://github.com/ahmeturganci" >ahmeturganci </a>
 </header>
 `;
 class AppHeader extends HTMLElement {
