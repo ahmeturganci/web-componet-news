@@ -22,7 +22,7 @@ async function getArticles() {
         el.setAttribute('publishedAt', article.publishedAt);
         el.setAttribute('title', article.title);
         el.setAttribute('url', article.url);
-        let defaultUrl = `http://${location.host}/assets/images/default.png`;
+        let defaultUrl = `http://${location.host}/web-componet-news/assets/images/default.png`;
         defaultUrl = validateUrl(article.urlToImage)? article.urlToImage: defaultUrl;
             el.setAttribute('urlToImage',defaultUrl )
         

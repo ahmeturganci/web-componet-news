@@ -1,7 +1,7 @@
 const headerTemplate = document.createElement("template");
 headerTemplate.innerHTML = `
 <style>
-@import url('https://${location.host}/src/components/app-header/app-header.css');
+@import url('https://${location.host}/web-componet-news/src/components/app-header/app-header.css');
 </style>
 <header>
 news app | <a target="_blank" href="https://github.com/ahmeturganci" >ahmeturganci </a>
