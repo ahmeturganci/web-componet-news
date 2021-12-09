@@ -1,7 +1,7 @@
 const loaderTemplate = document.createElement("template");
 loaderTemplate.innerHTML = `
 <style>
-@import url('https://${location.host}/src/components/app-loader/app-loader.css');
+@import url('https://${location.host}/web-componet-news/src/components/app-loader/app-loader.css');
 </style>
 <div class="loader"></div>
 `
