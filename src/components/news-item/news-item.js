@@ -1,7 +1,7 @@
 const newItem = document.createElement("template");
 newItem.innerHTML = `
     <style>
-    @import url('https://${location.host}/web-componet-news/src/components/news-item/news-item.css");
+    @import url('http://${location.host}/src/components/news-item/news-item.css');
     </style>
 
     <div class="article-wrapper card" >
